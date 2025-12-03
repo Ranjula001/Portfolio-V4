@@ -7,10 +7,10 @@ const GitHubStats = () => {
   ];
 
   const languages = [
-    { name: "JavaScript", percentage: 45 },
-    { name: "TypeScript", percentage: 30 },
-    { name: "Python", percentage: 15 },
-    { name: "CSS", percentage: 10 }
+    { name: "JavaScript", percentage: 50 },
+    { name: "TypeScript", percentage: 50 },
+    { name: "Python", percentage: 35 },
+    { name: "CSS", percentage: 50 }
   ];
 
   return (
