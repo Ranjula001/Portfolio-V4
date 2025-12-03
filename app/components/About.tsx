@@ -25,9 +25,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 justify-center">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold jarvis-text mb-12 text-center">About Me</h2>
+    <section id="about" className="py-20 px-6 flex items-center justify-center">
+      <div className="flex flex-col max-w-7xl w-full">
+        <h2 className="text-4xl font-bold jarvis-text mb-12 text-center py-5">About Me</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {aboutData.map((section, index) => (
             <div key={index} className="jarvis-bg rounded-lg p-6 border border-cyan-500/20">

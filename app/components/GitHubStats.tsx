@@ -14,8 +14,8 @@ const GitHubStats = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-transparent to-cyan-950/10">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-6 bg-gradient-to-b from-transparent to-cyan-950/10 flex items-center justify-center">
+      <div className="flex flex-col max-w-7xl w-full">
         <h2 className="text-4xl font-bold jarvis-text mb-12 text-center">GitHub Stats</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Stats */}

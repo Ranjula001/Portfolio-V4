@@ -35,8 +35,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-20 px-6 flex items-center justify-center">
+      <div className="flex flex-col max-w-7xl w-full">
         <div className="text-center mb-12">
           <div className="text-cyan-400 text-sm font-mono mb-2">{'>'} Loading_projects...</div>
           <h2 className="text-4xl font-bold jarvis-text">Featured Projects</h2>

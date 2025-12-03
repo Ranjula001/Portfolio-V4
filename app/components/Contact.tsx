@@ -29,8 +29,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 mb-20">
-      <div className="max-w-6xl mx-auto text-center">
+    <section id="contact" className="py-20 px-6 mb-20 flex items-center justify-center">
+      <div className="flex flex-col max-w-7xl w-full text-center">
         <div className="mb-12">
           <div className="text-cyan-400 text-sm font-mono mb-2">{'>'} Establishing_connection...</div>
           <h2 className="text-4xl font-bold jarvis-text mb-4">Connect With Me</h2>
