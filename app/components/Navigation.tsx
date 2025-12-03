@@ -3,7 +3,7 @@
 const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-cyan-500/20">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div className="jarvis-text font-bold text-xl">
             RANJULA.DEV
