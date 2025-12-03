@@ -18,7 +18,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black relative">
-      <div className="scanline"></div>
       <AnimatePresence>
         {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
       </AnimatePresence>
