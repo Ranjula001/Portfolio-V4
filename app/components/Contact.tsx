@@ -29,9 +29,9 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto text-center">
-        <div className="mb-12">
+    <section id="contact" className="py-12 px-6">
+      <div className="w-full text-center">
+        <div className="mb-8">
           <div className="text-cyan-400 text-sm font-mono mb-2">{'>'} Establishing_connection...</div>
           <h2 className="text-4xl font-bold jarvis-text mb-4">Connect With Me</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -39,7 +39,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {contactMethods.map((method, index) => (
             <a 
               key={index}

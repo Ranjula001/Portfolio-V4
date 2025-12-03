@@ -35,13 +35,13 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+    <section id="projects" className="py-12 px-6">
+      <div className="w-full">
+        <div className="text-center mb-8">
           <div className="text-cyan-400 text-sm font-mono mb-2">{'>'} Loading_projects...</div>
           <h2 className="text-4xl font-bold jarvis-text">Featured Projects</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div key={index} className="project-card rounded-lg p-6 space-y-4">
               <div className="flex items-center space-x-3">
