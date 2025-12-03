@@ -15,7 +15,7 @@ const PortfolioContent = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen bg-black grid-bg"
+      className="relative z-1"
     >
       <Navigation />
       <Hero />
