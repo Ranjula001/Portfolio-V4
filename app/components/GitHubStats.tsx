@@ -14,10 +14,10 @@ const GitHubStats = () => {
   ];
 
   return (
-    <section className="py-12 px-6 bg-gray-900/20">
-      <div className="w-full">
-        <h2 className="text-4xl font-bold jarvis-text mb-8 text-center">GitHub Stats</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <section className="py-20 px-6 bg-gradient-to-b from-transparent to-cyan-950/10">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold jarvis-text mb-12 text-center">GitHub Stats</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Stats */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Activity Overview</h3>

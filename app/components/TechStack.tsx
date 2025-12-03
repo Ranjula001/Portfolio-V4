@@ -21,10 +21,10 @@ const TechStack = () => {
   ];
 
   return (
-    <section id="tech" className="py-12 px-6 bg-gray-900/20">
-      <div className="w-full">
-        <h2 className="text-4xl font-bold jarvis-text mb-8 text-center">Tech Stack</h2>
-        <div className="space-y-6">
+    <section id="tech" className="py-20 px-6 bg-gradient-to-b from-transparent to-cyan-950/10">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold jarvis-text mb-12 text-center">Tech Stack</h2>
+        <div className="space-y-8">
           {techCategories.map((category, index) => (
             <div key={index} className="space-y-4">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">● {category.title}</h3>

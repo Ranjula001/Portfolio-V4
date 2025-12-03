@@ -35,9 +35,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-12 px-6">
-      <div className="w-full">
-        <div className="text-center mb-8">
+    <section id="projects" className="py-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
           <div className="text-cyan-400 text-sm font-mono mb-2">{'>'} Loading_projects...</div>
           <h2 className="text-4xl font-bold jarvis-text">Featured Projects</h2>
         </div>

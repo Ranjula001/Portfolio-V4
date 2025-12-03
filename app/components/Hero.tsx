@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section id="home" className="py-12 px-6">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6">
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -24,7 +24,7 @@ const Hero = () => {
             {'>'} Initializing_user_profile...
           </motion.div>
           <div className="space-y-4">
-            <h1 className="text-5xl lg:text-6xl font-bold text-white">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
               Hi, I&apos;m <span className="jarvis-text">Ranjula Ilukpitiya</span>
             </h1>
             <div className="space-y-2 text-xl text-gray-300">
