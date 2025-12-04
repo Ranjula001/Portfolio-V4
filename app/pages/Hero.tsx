@@ -38,20 +38,25 @@ const Hero = () => {
             create innovative solutions that make a difference.
           </p>
           <div className="flex space-x-4">
-            <motion.button 
+            <motion.a 
+              href="/RanjulaIlukpitiya_Latest_CV.pdf"
+              download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="jarvis-glow px-6 py-3 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-all"
+              className="jarvis-glow px-6 py-3 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-all inline-block"
             >
               Download CV
-            </motion.button>
-            <motion.button 
+            </motion.a>
+            <motion.a 
+              href="https://github.com/Ranjula001?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all"
+              className="px-6 py-3 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all inline-block"
             >
               View Projects
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
         <motion.div 
