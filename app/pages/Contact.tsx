@@ -55,7 +55,7 @@ const Contact = () => {
           ))}
         </div>
 
-        <div className="jarvis-bg rounded-lg p-8 border border-cyan-500/20 max-w-2xl mx-auto">
+        <div className="jarvis-bg rounded-lg p-10 border border-cyan-500/20 w-full mx-auto">
           <h3 className="text-2xl font-bold jarvis-text mb-4">Thanks for visiting!</h3>
           <p className="text-gray-400 mb-6">
             Feel free to star repositories or reach out for collaborations.
