@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6">
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -19,12 +19,12 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
             className="text-cyan-400 text-sm font-mono flex items-center gap-2"
-          >
+            style={{marginBottom : 10}}          >
             <Cpu className="w-4 h-4 animate-pulse" />
             {'>'} Initializing_user_profile...
           </motion.div>
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+          <div className="my-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white ">
               Hi, I&apos;m <span className="jarvis-text">Ranjula Ilukpitiya</span>
             </h1>
             <div className="space-y-2 text-xl text-gray-300">

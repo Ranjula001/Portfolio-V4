@@ -8,6 +8,7 @@ import TechStack from './TechStack';
 import Projects from './Projects';
 import GitHubStats from './GitHubStats';
 import Contact from './Contact';
+import ScrollToTop from '../components/ScrollToTop';
 
 const PortfolioContent = () => {
   return (
@@ -17,7 +18,6 @@ const PortfolioContent = () => {
       transition={{ duration: 0.5 }}
       className="relative z-1"
     >
-      
       <Navigation />
       <Hero />
       <About />
@@ -25,6 +25,7 @@ const PortfolioContent = () => {
       <Projects />
       <GitHubStats />
       <Contact />
+      <ScrollToTop />
     </motion.div>
   );
 };
