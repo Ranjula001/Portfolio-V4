@@ -26,7 +26,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
   useEffect(() => {
     const duration = 3800;
     const interval = 20;
-    const increment = 100 / (duration / interval);
+    const increment = 150 / (duration / interval);
 
     const timer = setInterval(() => {
       setProgress(prev => {
@@ -88,7 +88,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
           R . I L U K P I T I Y A
         </h1>
         <p className="text-cyan-600 font-mono text-sm tracking-wider">
-          PORTFOLIO SYSTEM v2.0
+          SYSTEM verson 4.4.4.4
         </p>
       </motion.div>
 

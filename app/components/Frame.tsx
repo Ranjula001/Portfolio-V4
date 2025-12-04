@@ -26,7 +26,7 @@ export default function Frame({ children }: FrameProps) {
       </div>
       
       {/* Scrollable content container */}
-      <div className="absolute inset-0 overflow-y-auto px-20 py-20">
+      <div className="absolute inset-0 overflow-y-auto px-20 py-20 scroll-smooth">
         {children}
       </div>
     </div>

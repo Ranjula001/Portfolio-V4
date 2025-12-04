@@ -23,14 +23,13 @@ const Hero = () => {
             <Cpu className="w-4 h-4 animate-pulse" />
             {'>'} Initializing_user_profile...
           </motion.div>
-          <div className="my-16">
+          <div className="my-5">
             <h1 className="text-5xl md:text-6xl font-bold text-white ">
               Hi, I&apos;m <span className="jarvis-text">Ranjula Ilukpitiya</span>
             </h1>
-            <div className="space-y-2 text-xl text-gray-300">
-              <div>• Software Engineer</div>
-              <div>• React Frontend Developer</div>
-              <div>• ML & Fitness Tech Enthusiast</div>
+            <div className="space-y-2 text-xl text-gray-300 my-5">
+              <div><span className='text-blue-700'>•</span> Full Stack Developer</div>
+              <div><span className='text-fuchsia-700'>•</span> UI/UX Designer</div>
             </div>
           </div>
           <p className="text-gray-400 text-lg leading-relaxed max-w-lg">

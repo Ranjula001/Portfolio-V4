@@ -16,7 +16,7 @@ const PortfolioContent = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative z-1"
+      className="relative z-50"
     >
       <Navigation />
       <Hero />
