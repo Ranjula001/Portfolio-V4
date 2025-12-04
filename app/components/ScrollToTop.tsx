@@ -44,7 +44,7 @@ export default function ScrollToTop() {
         >
           <div className="relative w-8 h-8">
             <Image
-              src="/jetpack.png"
+              src="/jetPack.png"
               alt="Jetpack"
               fill
               className="object-contain group-hover:brightness-110 transition-all duration-300"
