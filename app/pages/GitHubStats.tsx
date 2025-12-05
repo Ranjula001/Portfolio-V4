@@ -42,32 +42,31 @@ const GitHubStats = () => {
 
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-transparent to-cyan-950/10 flex items-center justify-center z-50">
+    <section className="py-12 sm:py-16 md:py-20 mobile-container bg-gradient-to-b from-transparent to-cyan-950/10 flex items-center justify-center z-50">
       <div className="flex flex-col max-w-7xl w-full">
-        <div className="text-cyan-400 text-sm font-mono mb-2 text-start">{'>'} Fetching_github_status...</div>
-        {/* <h2 className="text-4xl font-bold jarvis-text mb-12 text-start">GitHub Stats</h2> */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="text-cyan-400 text-xs sm:text-sm font-mono mb-2 text-start">{'>'} Fetching_github_status...</div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Stats */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Activity Overview</h3>
-            <div className="grid grid-cols-2 gap-6">
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-cyan-400 mb-4 sm:mb-6">Activity Overview</h3>
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
               {animatedStats.map((stat, index) => (
                 <motion.div 
                   key={index} 
-                  className="jarvis-bg rounded-lg p-6 text-center border border-cyan-500/20"
+                  className="jarvis-bg rounded-lg p-3 sm:p-6 text-center border border-cyan-500/20"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <div className="text-3xl font-bold jarvis-text mb-2">{stat.value}+</div>
-                  <div className="text-cyan-400 font-medium">{stat.label}</div>
-                  <div className="text-gray-400 text-sm">{stat.subtitle}</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold jarvis-text mb-1 sm:mb-2">{stat.value}+</div>
+                  <div className="text-cyan-400 font-medium text-sm sm:text-base">{stat.label}</div>
+                  <div className="text-gray-400 text-xs sm:text-sm">{stat.subtitle}</div>
                 </motion.div>
               ))}
             </div>
-            <div className="jarvis-bg rounded-lg p-6 border border-cyan-500/20">
-              <h4 className="text-lg font-semibold text-cyan-400 mb-4">GitHub Stats</h4>
-              <div className="text-gray-300">
+            <div className="jarvis-bg rounded-lg p-4 sm:p-6 border border-cyan-500/20">
+              <h4 className="text-base sm:text-lg font-semibold text-cyan-400 mb-3 sm:mb-4">GitHub Stats</h4>
+              <div className="text-gray-300 text-sm sm:text-base">
                 <div className="flex justify-between mb-2">
                   <span>Total Repositories:</span>
                   <span className="text-cyan-400">50+</span>
@@ -81,24 +80,24 @@ const GitHubStats = () => {
           </div>
 
           {/* Languages */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Top Languages</h3>
-            <div className="space-y-4">
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-cyan-400 mb-4 sm:mb-6">Top Languages</h3>
+            <div className="space-y-3 sm:space-y-4">
               {languageProgress.map((lang, index) => (
                 <motion.div 
                   key={index} 
-                  className="space-y-2"
+                  className="space-y-1.5 sm:space-y-2"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 + 0.3 }}
                 >
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between text-xs sm:text-sm">
                     <span className="text-gray-300">{lang.name}</span>
                     <span className="text-cyan-400">{lang.target}%</span>
                   </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                  <div className="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 overflow-hidden">
                     <motion.div 
-                      className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full"
+                      className="bg-gradient-to-r from-cyan-500 to-blue-500 h-1.5 sm:h-2 rounded-full"
                       initial={{ width: 0 }}
                       animate={{ width: `${lang.percentage}%` }}
                       transition={{ duration: 1.5, delay: index * 0.2 + 0.5, ease: "easeOut" }}

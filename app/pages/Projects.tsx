@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { Zap, UtensilsCrossed, Building2, ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
@@ -37,34 +38,39 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-6 flex items-center justify-center">
+    <section id="projects" className="py-12 sm:py-16 md:py-20 mobile-container flex items-center justify-center">
       <div className="flex flex-col max-w-7xl w-full">
-        <div className="text-center mb-12">
-          <div className="text-cyan-400 text-sm font-mono mb-2 text-start">{'>'} Loading_projects...</div>
-          <h2 className="text-4xl font-bold jarvis-text text-start">Featured Projects</h2>
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="text-cyan-400 text-xs sm:text-sm font-mono mb-2 text-start">{'>'} Loading_projects...</div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold jarvis-text text-start mobile-text-4xl">Featured Projects</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {projects.map((project, index) => (
-            <div key={index} className="project-card rounded-lg p-6 space-y-4">
-              <div className="flex items-center space-x-3">
-                <div>{project.icon}</div>
-                <h3 className="text-xl font-semibold text-cyan-400">{project.title}</h3>
+            <div key={index} className="project-card rounded-lg space-y-3 sm:space-y-4 p-4">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="flex-shrink-0">
+                  {React.cloneElement(project.icon, { 
+                    size: typeof window !== 'undefined' && window.innerWidth < 430 ? 20 : 24,
+                    className: "text-cyan-400" 
+                  })}
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-cyan-400 leading-tight">{project.title}</h3>
               </div>
-              <p className="text-gray-300 leading-relaxed">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{project.description}</p>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {project.tech.map((tech, techIndex) => (
-                  <span key={techIndex} className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded">
+                  <span key={techIndex} className="tech-badge">
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="flex space-x-4 pt-4">
-                <a href={project.links.demo} className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1">
-                  <ExternalLink size={16} />
+              <div className="flex flex-col xs:flex-row gap-2 xs:gap-4 pt-3 sm:pt-4">
+                <a href={project.links.demo} className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1 text-sm sm:text-base">
+                  <ExternalLink size={14} className="sm:w-4 sm:h-4" />
                   Live Demo
                 </a>
-                <a href={project.links.github} className="text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1">
-                  <Github size={16} />
+                <a href={project.links.github} className="text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 text-sm sm:text-base">
+                  <Github size={14} className="sm:w-4 sm:h-4" />
                   GitHub
                 </a>
               </div>
