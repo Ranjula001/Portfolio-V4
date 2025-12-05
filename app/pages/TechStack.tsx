@@ -1,19 +1,20 @@
 'use client';
 
+import React from 'react';
 import { 
   Monitor, Database, Brain, Settings,
   Code, Layers, Globe, Palette, Zap,
-  Server, Cpu, Shield, Cloud, Wrench
+  Server, Cpu, Cloud, Wrench, ServerCog,
+  CloudCog,
 } from 'lucide-react';
 
 const TechStack = () => {
   const techCategories = [
     {
-      title: "Frontend",
+      title: "Frontend Technologies",
       icon: <Monitor size={20} className="text-cyan-400" />,
       techs: [
         { name: "React", icon: <Code size={16} /> },
-        { name: "Spring Boot", icon: <Layers size={16} /> },
         { name: "Next.js", icon: <Globe size={16} /> },
         { name: "TypeScript", icon: <Code size={16} /> },
         { name: "JavaScript", icon: <Code size={16} /> },
@@ -23,15 +24,23 @@ const TechStack = () => {
       ]
     },
     {
-      title: "Backend & Database",
-      icon: <Database size={20} className="text-cyan-400" />,
+      title: "Backend Technologies",
+      icon: <ServerCog size={20} className="text-cyan-400" />,
       techs: [
         { name: "Node.js", icon: <Server size={16} /> },
+        { name: "Spring Boot", icon: <Layers size={16} /> },
         { name: "Express.js", icon: <Server size={16} /> },
-        { name: "PostgreSQL", icon: <Database size={16} /> },
-        { name: "MongoDB", icon: <Database size={16} /> },
-        { name: "Firebase", icon: <Cloud size={16} /> },
         { name: "RESTful APIs", icon: <Globe size={16} /> }
+      ]
+    },
+        {
+      title: "Database",
+      icon: <Database size={20} className="text-cyan-400" />,
+      techs: 
+      [
+        { name: "PostgreSQL", icon: <Database size={16} /> },
+        { name: "MongoDB", icon: <CloudCog size={16} /> },
+        { name: "Firebase", icon: <CloudCog size={16} /> },
       ]
     },
     {
@@ -60,21 +69,30 @@ const TechStack = () => {
   ];
 
   return (
-    <section id="tech" className="py-20 px-6 bg-gradient-to-b from-transparent to-cyan-950/10 flex items-center justify-center">
+    <section id="tech" className="py-12 sm:py-16 md:py-20 mobile-container bg-gradient-to-b from-transparent to-cyan-950/10 flex items-center justify-center">
       <div className="flex flex-col max-w-7xl w-full">
-        <h2 className="text-4xl font-bold jarvis-text mb-12 text-start">Tech Stack</h2>
-        <div className="space-y-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold jarvis-text mb-8 sm:mb-12 text-start mobile-text-4xl">Tech Stack</h2>
+        <div className="space-y-6 sm:space-y-8">
           {techCategories.map((category, index) => (
-            <div key={index} className="space-y-4">
-              <div className="flex items-center gap-3 mb-4">
-                {category.icon}
-                <h3 className="text-xl font-semibold text-cyan-400">{category.title}</h3>
+            <div key={index} className="space-y-3 sm:space-y-4">
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                <div className="flex-shrink-0">
+                  {React.cloneElement(category.icon, { 
+                    size: typeof window !== 'undefined' && window.innerWidth < 430 ? 18 : 20,
+                    className: "text-cyan-400" 
+                  })}
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-cyan-400 leading-tight">{category.title}</h3>
               </div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {category.techs.map((tech, techIndex) => (
-                  <span key={techIndex} className="tech-badge flex items-center gap-2">
-                    <span className="text-cyan-400">{tech.icon}</span>
-                    {tech.name}
+                  <span key={techIndex} className="tech-badge flex items-center gap-1.5 sm:gap-2">
+                    <span className="text-cyan-400 flex-shrink-0">
+                      {React.cloneElement(tech.icon, { 
+                        size: typeof window !== 'undefined' && window.innerWidth < 430 ? 12 : 16 
+                      })}
+                    </span>
+                    <span className="text-xs sm:text-sm">{tech.name}</span>
                   </span>
                 ))}
               </div>
